@@ -11,9 +11,13 @@ void setup()
 void loop()
 {
  val = analogRead(ldrIn);
- Serial.println(val);
-  if(val <= 500)
+  if(val <= 500) {
+    Serial.println((String)val + " Value below Threshold ");
    digitalWrite(ledOut, HIGH);
-  else
-   digitalWrite(ledOut, LOW); 
+  }
+  else {
+    Serial.println( (String)val +" Value above Threshold");
+   digitalWrite(ledOut, LOW);
+  }
+ delay(500); 
 }
