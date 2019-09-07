@@ -16,13 +16,13 @@ void loop() {
   Serial.println(sensorVal);
   if(sensorVal >= 800) {
     digitalWrite(13, HIGH);
-    for(pos=0; pos< 180; pos +=2) {
+    for(pos=0; pos< 180; pos +=1) {
       myservo.write(pos);
-      delay(50);
+      delay(20);
     }
-    for(pos=180; pos >=0; pos -=2) {
+    for(pos=180; pos >=0; pos -=1) {
       myservo.write(pos);
-      delay(50);
+      delay(20);
     }
   }
   else
